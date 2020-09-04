@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B632222F250190A40064DEB5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632222E250190A40064DEB5 /* CollectionViewController.swift */; };
+		B6322231250191CF0064DEB5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6322230250191CF0064DEB5 /* CollectionViewCell.swift */; };
 		B689AE6D2500836D005FE8BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B689AE6C2500836D005FE8BE /* AppDelegate.swift */; };
 		B689AE6F2500836D005FE8BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B689AE6E2500836D005FE8BE /* SceneDelegate.swift */; };
 		B689AE712500836D005FE8BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B689AE702500836D005FE8BE /* ViewController.swift */; };
 		B689AE742500836D005FE8BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B689AE722500836D005FE8BE /* Main.storyboard */; };
 		B689AE7625008373005FE8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B689AE7525008373005FE8BE /* Assets.xcassets */; };
 		B689AE7925008373005FE8BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B689AE7725008373005FE8BE /* LaunchScreen.storyboard */; };
+		B689AE83250085CA005FE8BE /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B689AE82250085CA005FE8BE /* ImageModel.m */; };
+		B689AE8525013898005FE8BE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B689AE8425013898005FE8BE /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B632222E250190A40064DEB5 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		B6322230250191CF0064DEB5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B689AE692500836D005FE8BE /* UserInterfaceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserInterfaceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B689AE6C2500836D005FE8BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B689AE6E2500836D005FE8BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		B689AE7525008373005FE8BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B689AE7825008373005FE8BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B689AE7A25008373005FE8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B689AE80250085C9005FE8BE /* UserInterfaceExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserInterfaceExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		B689AE81250085CA005FE8BE /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		B689AE82250085CA005FE8BE /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		B689AE8425013898005FE8BE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +69,16 @@
 				B689AE6C2500836D005FE8BE /* AppDelegate.swift */,
 				B689AE6E2500836D005FE8BE /* SceneDelegate.swift */,
 				B689AE702500836D005FE8BE /* ViewController.swift */,
+				B689AE8425013898005FE8BE /* TableViewController.swift */,
+				B632222E250190A40064DEB5 /* CollectionViewController.swift */,
+				B6322230250191CF0064DEB5 /* CollectionViewCell.swift */,
+				B689AE81250085CA005FE8BE /* ImageModel.h */,
+				B689AE82250085CA005FE8BE /* ImageModel.m */,
 				B689AE722500836D005FE8BE /* Main.storyboard */,
 				B689AE7525008373005FE8BE /* Assets.xcassets */,
 				B689AE7725008373005FE8BE /* LaunchScreen.storyboard */,
 				B689AE7A25008373005FE8BE /* Info.plist */,
+				B689AE80250085C9005FE8BE /* UserInterfaceExample-Bridging-Header.h */,
 			);
 			path = UserInterfaceExample;
 			sourceTree = "<group>";
@@ -99,6 +115,7 @@
 				TargetAttributes = {
 					B689AE682500836D005FE8BE = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -138,9 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B632222F250190A40064DEB5 /* CollectionViewController.swift in Sources */,
 				B689AE712500836D005FE8BE /* ViewController.swift in Sources */,
 				B689AE6D2500836D005FE8BE /* AppDelegate.swift in Sources */,
+				B6322231250191CF0064DEB5 /* CollectionViewCell.swift in Sources */,
 				B689AE6F2500836D005FE8BE /* SceneDelegate.swift in Sources */,
+				B689AE8525013898005FE8BE /* TableViewController.swift in Sources */,
+				B689AE83250085CA005FE8BE /* ImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F69WJ27LN4;
 				INFOPLIST_FILE = UserInterfaceExample/Info.plist;
@@ -293,6 +315,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SMU.UserInterfaceExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UserInterfaceExample/UserInterfaceExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F69WJ27LN4;
 				INFOPLIST_FILE = UserInterfaceExample/Info.plist;
@@ -311,6 +336,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SMU.UserInterfaceExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UserInterfaceExample/UserInterfaceExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
