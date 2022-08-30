@@ -25,7 +25,7 @@
     if(!_imageNames)
         _imageNames = @[@"Bill",@"Eric",@"Jeff"];
     
-    return _imageNames;
+    return _imageNames; 
 }
 
 
