@@ -58,7 +58,6 @@
 //    NSString *imageName = nil;
     for(CharacterModel *character in self.imageNames) {
         if([character getName] == name) {
-            NSLog([character getImage]);
             return [UIImage imageNamed:[character getImage]];
         }
     }

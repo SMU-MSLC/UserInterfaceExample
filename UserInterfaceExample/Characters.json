@@ -9,6 +9,10 @@
             "name": "Patrick",
             "bio": "Patrick Star (born August 17), is the one of the ten main characters of the animated series, SpongeBob SquarePants, and the main character of his own spin-off, The Patrick Star Show. He is SpongeBob's best friend as well as one of his two neighbors.",
             "image": "patrick"
+        },
+        {
+            "name": "test",
+            "bio": "Patrick Star (born August 17), is the one of the ten main characters of the animated series, SpongeBob SquarePants, and the main character of his own spin-off, The Patrick Star Show. He is SpongeBob's best friend as well as one of his two neighbors."
         }
     ]
 }
