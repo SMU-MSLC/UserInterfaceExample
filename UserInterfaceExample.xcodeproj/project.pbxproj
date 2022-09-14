@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01FA563B28D2898A00399307 /* CharacterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA563928D2898A00399307 /* CharacterModel.m */; };
+		01FA563D28D289B500399307 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 01FA563C28D289B500399307 /* Characters.json */; };
 		3C01437228D142AC009CA8B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01437128D142AC009CA8B6 /* SettingsView.swift */; };
 		B632222F250190A40064DEB5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632222E250190A40064DEB5 /* CollectionViewController.swift */; };
 		B6322231250191CF0064DEB5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6322230250191CF0064DEB5 /* CollectionViewCell.swift */; };
@@ -22,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01FA563928D2898A00399307 /* CharacterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterModel.m; sourceTree = "<group>"; };
+		01FA563A28D2898A00399307 /* CharacterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterModel.h; sourceTree = "<group>"; };
+		01FA563C28D289B500399307 /* Characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
 		3C01437128D142AC009CA8B6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B632222E250190A40064DEB5 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		B6322230250191CF0064DEB5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +80,9 @@
 				B689AE6C2500836D005FE8BE /* AppDelegate.swift */,
 				B689AE6E2500836D005FE8BE /* SceneDelegate.swift */,
 				B689AE702500836D005FE8BE /* ViewController.swift */,
+				01FA563A28D2898A00399307 /* CharacterModel.h */,
+				01FA563C28D289B500399307 /* Characters.json */,
+				01FA563928D2898A00399307 /* CharacterModel.m */,
 				B689AE8425013898005FE8BE /* TableViewController.swift */,
 				B632222E250190A40064DEB5 /* CollectionViewController.swift */,
 				B6322230250191CF0064DEB5 /* CollectionViewCell.swift */,
@@ -160,6 +168,7 @@
 				B689AE7925008373005FE8BE /* LaunchScreen.storyboard in Resources */,
 				B689AE7625008373005FE8BE /* Assets.xcassets in Resources */,
 				B689AE742500836D005FE8BE /* Main.storyboard in Resources */,
+				01FA563D28D289B500399307 /* Characters.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +186,7 @@
 				B6322231250191CF0064DEB5 /* CollectionViewCell.swift in Sources */,
 				B689AE6F2500836D005FE8BE /* SceneDelegate.swift in Sources */,
 				B689AE8525013898005FE8BE /* TableViewController.swift in Sources */,
+				01FA563B28D2898A00399307 /* CharacterModel.m in Sources */,
 				B689AE83250085CA005FE8BE /* ImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
