@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(ImageModel*)sharedInstance;
 
+-(NSMutableArray<CharacterModel*>*) imageNames;
+
 -(UIImage*)getImageWithName:(NSString*)name;
 
 -(CharacterModel*)getCharacter:(NSString*)name;

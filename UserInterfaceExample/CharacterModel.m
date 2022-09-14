@@ -49,16 +49,12 @@
     return _bio;
 }
 
--(UIImage*)getImage {
+-(NSString*)getImage {
     if(!_image) {
         _image = nil;
     }
     
-    UIImage* image = nil;
-    
-    image = [UIImage imageNamed:self.name];
-    
-    return image;
+    return _image;
 }
 
 

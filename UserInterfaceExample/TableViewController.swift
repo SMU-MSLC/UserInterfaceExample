@@ -42,7 +42,7 @@ class TableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNameCell", for: indexPath)
             
             // Configure the cell...
-            if let name = self.imageModel.imageNames[indexPath.row] as? String {
+            if let name = (self.imageModel.imageNames[indexPath.row] as AnyObject).getName() as? String {
                 cell.textLabel!.text = name
             }
             

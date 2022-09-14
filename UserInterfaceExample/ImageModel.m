@@ -21,30 +21,49 @@
     return _sharedInstance;
 }
 
--(NSMutableArray*) imageNames{
-    if(!_imageNames)
-        _imageNames = @[[[CharacterModel alloc] initWithFields:@"Spongebob"
-                                                           bio:@"SpongeBob is a childish, joyful, and clumsy sea sponge who lives in a pineapple with his pet snail Gary in the underwater city of Bikini Bottom. He works as a fry cook at the Krusty Krab, a job which he is exceptionally skilled at and enjoys thoroughly. He attends Mrs. Puff's Boating School, and his greatest dream in life is to receive his boating license. Unfortunately, he tenses up whenever he has to drive a boatmobile, and he drives recklessly. SpongeBob is very good-natured and loves to hang out with his best friend, Patrick. His teacher is Mrs. Puff and his boss is Mr. Krabs."
-                                                         image:@"spongebob"]];
+- (NSDictionary *)JSONFromFile {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Characters" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+}
+
+-(NSMutableArray*) parseJSON {
+    NSDictionary* parsed = [self JSONFromFile];
+    NSArray* characters = [parsed objectForKey:@"characters"];
+    NSMutableArray *toReturn;
+    
+    for(NSDictionary* character in characters) {
+        NSString* name = [character objectForKey:@"name"];
+        NSString* bio = [character objectForKey:@"bio"];
+        NSString* image = [character objectForKey:@"image"];
+        
+        [self.imageNames addObject:[[CharacterModel alloc] initWithFields:name bio:bio image:image]];
+    }
+    
+    return toReturn;
+}
+
+-(NSMutableArray<CharacterModel*>*) imageNames{
+    if(!_imageNames) {
+       _imageNames = [[NSMutableArray alloc] init];
+        [self parseJSON];
+    }
+        
     
     return _imageNames; 
 }
 
 
 -(UIImage*)getImageWithName:(NSString*)name{
-    NSString *imageName = nil;
+//    NSString *imageName = nil;
     for(CharacterModel *character in self.imageNames) {
         if([character getName] == name) {
-            imageName = [character getImage];
-            break;
+            NSLog([character getImage]);
+            return [UIImage imageNamed:[character getImage]];
         }
     }
     
-    UIImage* image = nil;
-    
-    image = [UIImage imageNamed:imageName];
-    
-    return image;
+    return nil;
 }
 
 -(CharacterModel*)getCharacter:(NSString*)name {
