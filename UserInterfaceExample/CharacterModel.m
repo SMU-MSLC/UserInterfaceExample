@@ -13,7 +13,7 @@
 @synthesize bio = _bio;
 @synthesize image = _image;
 
--(CharacterModel*)initWithFields:(NSString *)name bio:(NSString *)bio image:(NSString *)image:(NSString*)name {
+-(CharacterModel*)initWithFields:(NSString *)name bio:(NSString *)bio image:(NSString *)image {
     _name = name;
     _bio = bio;
     _image = image;
