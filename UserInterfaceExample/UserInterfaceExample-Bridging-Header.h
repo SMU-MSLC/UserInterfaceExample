@@ -4,3 +4,4 @@
 
 #import "CharacterModel.h"
 #import "ImageModel.h"
+#import "SettingsModel.h"

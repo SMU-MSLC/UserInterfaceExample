@@ -88,7 +88,7 @@
 }
 
 -(int)getNumberOfCharacters {
-    return self.imageNames.count;
+    return (int)self.imageNames.count;
 }
 
 @end
