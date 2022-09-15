@@ -9,11 +9,17 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
+    var timer: Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(popModal), userInfo: nil, repeats: true)
+        
+    }
+    @objc func popModal(){
+        print("Start the bomb")
+        performSegue(withIdentifier: "goToBomb", sender: self)
+//        timer?.invalidate()
     }
     
     lazy var imageModel:ImageModel = {
