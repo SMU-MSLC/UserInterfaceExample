@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gPe-3A-bLs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gPe-3A-bLs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -112,7 +112,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhb-uu-uqF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2077" y="106"/>
+            <point key="canvasLocation" x="-2128" y="76"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="106"/>
+            <point key="canvasLocation" x="696" y="76"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="zLU-8D-Vl2">
@@ -194,7 +194,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JF9-fb-6Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="840.40178571428567"/>
+            <point key="canvasLocation" x="-1436" y="840"/>
         </scene>
         <!--Settings View-->
         <scene sceneID="F4T-f0-iwC">
@@ -204,59 +204,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="T42-iI-Ptg">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="T42-iI-Ptg">
                                 <rect key="frame" x="18" y="123" width="378" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="QuantitySlider:" destination="j1Z-O4-fTw" eventType="valueChanged" id="6Lq-g8-eTT"/>
                                     <action selector="SliderAction:" destination="9FZ-XJ-esh" eventType="valueChanged" id="0Sa-Lq-5MR"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpU-au-4bI">
-                                <rect key="frame" x="20" y="94" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eNM-mi-kQB">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eNM-mi-kQB">
                                 <rect key="frame" x="20" y="210" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="StepperAction:" destination="9FZ-XJ-esh" eventType="valueChanged" id="ixY-6B-xSM"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV4-Vt-8Wp">
-                                <rect key="frame" x="20" y="181" width="42" height="21"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ost-Xi-mdN">
+                                <rect key="frame" x="20" y="318" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="SwitchAction:" destination="9FZ-XJ-esh" eventType="valueChanged" id="xxj-SM-TBw"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqI-ko-TPZ">
+                                <rect key="frame" x="20" y="94" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kex-5Q-Tqb">
+                                <rect key="frame" x="20" y="181" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKM-o5-uvg">
+                                <rect key="frame" x="20" y="289" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mNf-1T-xny">
+                                <rect key="frame" x="0.0" y="602" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9C-H3-gqL">
+                                <rect key="frame" x="20" y="551" width="76" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="PickerButtonPress:" destination="9FZ-XJ-esh" eventType="touchUpInside" id="o8O-WK-Ykv"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tlw-Wt-TSV">
+                                <rect key="frame" x="20" y="433" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cz8-xW-uxv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="JpU-au-4bI" firstAttribute="leading" secondItem="cz8-xW-uxv" secondAttribute="leading" constant="20" id="FVl-W1-BFp"/>
-                            <constraint firstItem="T42-iI-Ptg" firstAttribute="leading" secondItem="cz8-xW-uxv" secondAttribute="leading" constant="20" id="G3K-55-xrK"/>
-                            <constraint firstItem="JpU-au-4bI" firstAttribute="top" secondItem="cz8-xW-uxv" secondAttribute="top" constant="6" id="IMR-DU-3z6"/>
-                            <constraint firstItem="T42-iI-Ptg" firstAttribute="top" secondItem="JpU-au-4bI" secondAttribute="bottom" constant="8" id="Iaf-sb-Luj"/>
-                            <constraint firstItem="eNM-mi-kQB" firstAttribute="leading" secondItem="cz8-xW-uxv" secondAttribute="leading" constant="20" id="KPh-xg-feE"/>
-                            <constraint firstItem="cz8-xW-uxv" firstAttribute="trailing" secondItem="T42-iI-Ptg" secondAttribute="trailing" constant="20" id="RMf-si-TfH"/>
-                            <constraint firstItem="eNM-mi-kQB" firstAttribute="top" secondItem="cV4-Vt-8Wp" secondAttribute="bottom" constant="8" id="TxU-fN-l45"/>
-                            <constraint firstItem="cV4-Vt-8Wp" firstAttribute="leading" secondItem="cz8-xW-uxv" secondAttribute="leading" constant="20" id="Xdf-OO-TXE"/>
-                            <constraint firstItem="T42-iI-Ptg" firstAttribute="top" secondItem="JpU-au-4bI" secondAttribute="bottom" constant="8" id="Yb5-hd-bdl"/>
-                            <constraint firstItem="cV4-Vt-8Wp" firstAttribute="top" secondItem="T42-iI-Ptg" secondAttribute="bottom" constant="28" id="tE9-M3-946"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SS6-gT-dEf"/>
                     <connections>
+                        <outlet property="Picker" destination="mNf-1T-xny" id="0hK-04-8tj"/>
+                        <outlet property="PickerButton" destination="w9C-H3-gqL" id="7JV-47-irQ"/>
                         <outlet property="Slider" destination="T42-iI-Ptg" id="fbC-ce-rxn"/>
-                        <outlet property="SliderLabel" destination="JpU-au-4bI" id="8Ib-wo-LE4"/>
+                        <outlet property="SliderLabel" destination="lqI-ko-TPZ" id="DUZ-AJ-ZD0"/>
                         <outlet property="Stepper" destination="eNM-mi-kQB" id="ZO6-oV-pTJ"/>
-                        <outlet property="StepperLabel" destination="cV4-Vt-8Wp" id="Gk6-5V-FDy"/>
+                        <outlet property="StepperLabel" destination="kex-5Q-Tqb" id="1CC-JS-los"/>
+                        <outlet property="Switch" destination="ost-Xi-mdN" id="sUi-Cm-u8B"/>
+                        <outlet property="SwitchLabel" destination="KKM-o5-uvg" id="fZn-eY-Ves"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nz5-kN-Nay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="j1Z-O4-fTw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1586" y="840"/>
+            <point key="canvasLocation" x="0.0" y="839.73214285714278"/>
         </scene>
     </scenes>
     <resources>
