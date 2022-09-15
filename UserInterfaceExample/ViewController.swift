@@ -25,6 +25,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let settings = SettingsClass.sharedInstance
+        self.view.backgroundColor = settings.backgroundColor
 
         if let size = self.imageView?.image?.size{
             self.scrollView.addSubview(self.imageView!)

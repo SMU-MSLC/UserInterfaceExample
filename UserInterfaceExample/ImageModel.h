@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "CharacterModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,9 +16,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(ImageModel*)sharedInstance;
 
+-(NSMutableArray<CharacterModel*>*) imageNames;
+
 -(UIImage*)getImageWithName:(NSString*)name;
 
-@property (strong, nonatomic) NSArray* imageNames;
+-(CharacterModel*)getCharacter:(NSString*)name;
+
+-(void)removeCharacter:(NSString*)name;
+
+-(void)addCharacter:(NSString*)name
+                bio:(NSString*)bio
+              image:(NSString*)image;
+
+-(int)getNumberOfCharacters;
+
+@property (strong, nonatomic) NSMutableArray<CharacterModel*>* imageNames;
 
 @end
 

@@ -9,11 +9,17 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
+    var timer: Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(popModal), userInfo: nil, repeats: true)
+        
+    }
+    @objc func popModal(){
+        print("Start the bomb")
+        performSegue(withIdentifier: "goToBomb", sender: self)
+//        timer?.invalidate()
     }
     
     lazy var imageModel:ImageModel = {
@@ -24,7 +30,7 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,17 +48,25 @@ class TableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNameCell", for: indexPath)
             
             // Configure the cell...
-            if let name = self.imageModel.imageNames[indexPath.row] as? String {
+            if let name = (self.imageModel.imageNames[indexPath.row] as AnyObject).getName() as? String {
                 cell.textLabel!.text = name
             }
             
             return cell
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionCell", for: indexPath)
+        }else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ViewAll", for: indexPath)
             
             // Configure the cell...
             cell.textLabel?.text = "All Image"
             cell.detailTextLabel?.text = "Summary"
+            
+            return cell
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Settings", for: indexPath)
+            
+            // Configure the cell...
+            cell.textLabel?.text = "Settings"
+//            cell.detailTextLabel?.text = "Settings"
             
             return cell
         }
