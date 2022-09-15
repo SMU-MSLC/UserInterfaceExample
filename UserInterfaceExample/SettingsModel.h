@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(UIColor*)background;
 
+-(void)setBackground:(UIColor *)background;
+
 @property (strong, nonatomic) UIColor* background;
 
 @end
