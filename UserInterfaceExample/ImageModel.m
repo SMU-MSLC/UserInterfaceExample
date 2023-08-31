@@ -7,9 +7,11 @@
 //
 
 #import "ImageModel.h"
+@interface ImageModel ()
+
+@end
 
 @implementation ImageModel
-@synthesize imageNames = _imageNames;
 
 +(ImageModel*)sharedInstance{
     static ImageModel* _sharedInstance = nil;
